@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>log-out-nav-template</title>
+    </head>
+    <body>
+
+<!--    Nav Bar:-->
+        <div th:fragment="nav-bar" class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/home}" class="nav-linc ">Home</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/home/reg}">Registration</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/worker/get-all-orders}">Sign In how Worker</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/customer/get-order-introduction}">Sign In how Customer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

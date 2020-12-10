@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>worker-nav-template</title>
+    </head>
+    <body>
+
+        <!-- Worker's Nav Bar:-->
+        <div th:fragment="nav-bar" class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/home}" class="nav-linc ">Home</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/worker/get-all-orders}" class="nav-linc">Orders</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/worker/get-taken-orders}" class="nav-linc">My progress</a>
+                    </li>
+
+                    <li class="nav-item px-sm-2">
+                        <a th:href="@{/account/get-profile}" class="nav-linc">Account</a>
+                    </li>
+                </ul>
+
+                <form th:action="@{/worker/get-orders-by-alias}" method="post" class="form-inline my-2 my-lg-0">
+                    <input type="text" name="alias" class="form-control mr-sm-2" placeholder="Search by title">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                </form>
+
+                <form th:action="@{/logout}" method="post" class="form-inline ml-sm-2 my-2 my-lg-0">
+                    <button type="submit" class="btn btn-outline-danger my-2 my-sm-0">Sign Out</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>order-form-template</title>
+    </head>
+    <body>
+
+        <div th:fragment="common-fields" class="container-fluid px-sm-0">
+            <h5 class="col-sm-12 m-sm-2 mt-sm-4">Order</h5>
+
+            <div class="col-sm-12">
+                <label th:for="${#ids.next('title')}" class="m-sm-2 align-self-center">Title: </label>
+                <input type="text" th:field="*{title}" class="w-50 d-inline form-control m-sm-2">
+                <a th:if="${#fields.hasErrors('title')}" th:errors="*{title}" style="color: red"></a>
+            </div>
+
+            <div class="col-sm-9">
+                <label th:for="${#ids.next('description')}" class="mx-sm-2 mt-sm-4 mb-sm-0">Description: </label>
+                <textarea th:field="*{description}" rows="6" class="w-100 form-control m-sm-2"></textarea>
+            </div>
+
+            <div class="col-sm-12 text-right">
+                <h5 class="w-100 px-sm-2 mr-sm-4 mt-sm-4">Order location</h5>
+
+                <div class="w-100">
+                    <label th:for="${#ids.next('locationCity')}" class="m-sm-2 align-self-center">City: </label>
+                    <input type="text" th:field="*{locationCity}" class="col-sm-6 d-inline-block form-control m-sm-2 ">
+                    <a th:if="${#fields.hasErrors('locationCity')}" th:errors="*{locationCity}" style="color: red"></a>
+                </div>
+
+                <div class="w-100">
+                    <label th:for="${#ids.next('locationStreet')}" class="m-sm-2 align-self-center">Street: </label>
+                    <input type="text" th:field="*{locationStreet}" class="w-50 d-inline-block form-control m-sm-2">
+                    <a th:if="${#fields.hasErrors('locationStreet')}" th:errors="*{locationStreet}" style="color: red"></a>
+                </div>
+
+                <div class="w-100">
+                    <label th:for="${#ids.next('locationHome')}" class="m-sm-2 align-self-center">Home: </label>
+                    <input type="text" th:field="*{locationHome}" class="col-sm-6 d-inline-block form-control m-sm-2">
+                    <a th:if="${#fields.hasErrors('locationHome')}" th:errors="*{locationHome}" style="color: red"></a>
+                </div>
+
+                <div class="w-100">
+                    <label th:for="${#ids.next('locationFlat')}" class="m-sm-2 align-self-center">Flat: </label>
+                    <input type="text" th:field="*{locationFlat}" class="w-50 d-inline-block form-control m-sm-2">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
