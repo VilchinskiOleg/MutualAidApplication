@@ -5,4 +5,11 @@ Thus, the application interface is designed to meet the needs of both categories
 the number of qualified services is clearly not enough to cover all the needs of local residents.
 
 Technology stack:
-* Spring Boot * Spring Mvc * Spring Security * Spring Data Jpa * Spring Validation * Testing (Junit, Mockito) * Thymeleaf * Bootstrap * PostgreSQL
+* Spring Boot 
+* Spring Mvc 
+* Spring Security 
+* Spring Data Jpa 
+* Spring Validation 
+* Testing (Junit, Mockito) 
+* Thymeleaf * Bootstrap 
+* PostgreSQL
