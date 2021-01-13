@@ -11,5 +11,6 @@
 * Spring Data Jpa 
 * Spring Validation 
 * Testing (Junit, Mockito) 
-* Thymeleaf * Bootstrap 
+* Thymeleaf 
+* Bootstrap 
 * PostgreSQL
